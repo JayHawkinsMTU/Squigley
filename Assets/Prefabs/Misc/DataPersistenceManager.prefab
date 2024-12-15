@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1259768113405628507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8268235119876144224}
+  - component: {fileID: 1933493400364746697}
+  m_Layer: 0
+  m_Name: DataPersistenceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8268235119876144224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259768113405628507}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44.32635, y: 23.764763, z: 4.084629}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933493400364746697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259768113405628507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efded194e55e16e4ab6aaa5e62282ede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: data.json
+  saveData:
+    unlockedDoors: 00000000000000000000
+    unlockedMessages: 00000000000000000000000000000000000000000000000000
+    unlockedSkins: 010000000000000000000000000000
+    unlockedAccessories: 000000000000000000000000000000
+    currentCheckpointID: 0
+    p1skinID: 0
+    p2skinID: 9
+    accessories: 0000000000000000
+    player1Color: {r: 1, g: 1, b: 1, a: 1}
+    player2Color: {r: 1, g: 0, b: 0, a: 1}
+    hasId: 0
+    parryUnlocked: 0
+    admin: 0
+    coinCount: 0
+    checkPointLives: 0
+    totalCoinsCollected: 0
+    vasesBroken: 0
+    totalDeaths: 0
+    messagesTriggered: 0
+    blocksBroken: 0
+    maxSize: 9
+    currentSize: 8
+    smoothCamera: 0
+    volume: 1
+    fullScreen: 0
+    sceneName: Overworld
+    speedrunTimer: 0
+    hours: 0
+    minutes: 0
+    seconds: 0
+    milliSeconds: 0
+    highScore: 1000
+    debug: 0
+    jump1: w
+    jump2: up
+    jump3: space
+    moveleft1: a
+    moveleft2: left
+    moveright1: d
+    moveright2: right
+    crouch1: s
+    crouch2: down
+    interact1: return
+    interact2: z

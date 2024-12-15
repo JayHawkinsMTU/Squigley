@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Splash Screen.unity
+    guid: 9daa90190ff0e804c93130e2d51b7080
+  - enabled: 0
+    path: Assets/Scenes/Steam Demo/Main Menu (Demo).unity
+    guid: 2bff2c352b3a34c49afa40b88b724b7e
+  - enabled: 0
+    path: Assets/Scenes/Steam Demo/Terminal (Demo).unity
+    guid: 8a44820740eeb554d9c3aabc30d0fbd6
+  - enabled: 0
+    path: Assets/Scenes/Steam Demo/Tutorial (Demo).unity
+    guid: e2f611e86da1c2548938690d2f68997f
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: e007335025d78dd4facc308b0cabb51a
+  - enabled: 1
+    path: Assets/Scenes/Oblivion Arcade.unity
+    guid: 42ea46f750edc15488781e62ed7e127a
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 09ab00d41e8fec64bafe85e77c9bb4be
+  - enabled: 1
+    path: Assets/Scenes/Void.unity
+    guid: 95d6795bb7fe77a4bb6d3b0353d53744
+  - enabled: 1
+    path: Assets/Scenes/Overworld.unity
+    guid: 0dce8f8d107aafc43870c2761249e7ae
+  - enabled: 1
+    path: Assets/Scenes/Kilroy.unity
+    guid: 43a316f382ffcd047b128ed2716272a9
+  - enabled: 1
+    path: Assets/Scenes/Oblivion.unity
+    guid: f3b69a96110a84247bfb9852cdb6bf0a
+  - enabled: 1
+    path: Assets/Scenes/Terminal.unity
+    guid: f7ab7137bf172a245ae0048e370c04b9
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: e35d33752009f504486df8d53b6c961f
+  - enabled: 1
+    path: Assets/Scenes/The Edge of Memory.unity
+    guid: 33dd98bc3019fbe42b7c81aa9fb96f93
+  - enabled: 1
+    path: Assets/Scenes/Final Boss.unity
+    guid: d82cb9f988aa1fa4b89863e44ad2fa16
+  - enabled: 1
+    path: Assets/Scenes/Terminal 2.unity
+    guid: 3db18f00ff100aa439aacba56f2fae66
+  m_configObjects: {}
