@@ -6633,17 +6633,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5608760465633507754, guid: 62aa1c880182083478dbe1b5766cc82f, type: 3}
   m_PrefabInstance: {fileID: 1743749662}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1227855442 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5989059887362570988, guid: 62aa1c880182083478dbe1b5766cc82f, type: 3}
-  m_PrefabInstance: {fileID: 1743749662}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227855441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80e6932bca0cc7649a0e71764a574f51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1227855452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7384,7 +7373,7 @@ PrefabInstance:
     - target: {fileID: 1340002095931374456, guid: 6a43f2951ada0da408a551d212789c1d, type: 3}
       propertyPath: timeData
       value: 
-      objectReference: {fileID: 1227855442}
+      objectReference: {fileID: 0}
     - target: {fileID: 2782865983468794437, guid: 6a43f2951ada0da408a551d212789c1d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7658,6 +7647,7 @@ PrefabInstance:
       objectReference: {fileID: 860560560}
     m_RemovedComponents:
     - {fileID: 7474724509330875567, guid: 62aa1c880182083478dbe1b5766cc82f, type: 3}
+    - {fileID: 5989059887362570988, guid: 62aa1c880182083478dbe1b5766cc82f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

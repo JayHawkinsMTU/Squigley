@@ -8,7 +8,7 @@ public class MusicPlayer : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip[] tracks;
     public string[] trackNames;
-    private int trackId = 0;
+    private static int trackId = 0;
     
     void Awake()
     {

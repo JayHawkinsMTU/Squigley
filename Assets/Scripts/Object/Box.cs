@@ -15,7 +15,9 @@ public class Box : MonoBehaviour, Interactable
     {
         player = p;
         playerRigidbody = player.GetComponent<Rigidbody2D>();
-        p.GetComponent<Movement>().boundTo = this;
+        Movement m = p.GetComponent<Movement>();
+        m.boundTo = this;
+        playerID = m.playerID;
         
         audioSource.PlayOneShot(bind, 0.5f);
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
@@ -23,11 +25,7 @@ public class Box : MonoBehaviour, Interactable
         player.transform.eulerAngles = new Vector3(0, 0, 0);
         if(!bound)
         {
-            bound = true;
-            player.GetComponent<Movement>().jumpForce = 500f;
-            playerRigidbody.velocity = Vector3.zero;
-            playerRigidbody.angularVelocity = 0;
-            playerRigidbody.gravityScale = 0;
+            Bind(m);
         }
         else
         {
@@ -40,11 +38,27 @@ public class Box : MonoBehaviour, Interactable
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Bind(Movement m)
+    {
+        bound = true;
+        m.jumpForce = 500f;
+        playerRigidbody.velocity = Vector3.zero;
+        playerRigidbody.angularVelocity = 0;
+        playerRigidbody.gravityScale = 0;
+    }
+
     public void Unbind()
     {
         bound = false;
         player.GetComponent<Movement>().boundTo = null;
         playerRigidbody.gravityScale = 2;
+    }
+
+    public void JumpOut()
+    {
+        player.GetComponent<Movement>().grounded = true;
+        audioSource.PlayOneShot(bind, 0.5f);
+        Unbind();
     }
 
     // Update is called once per frame
@@ -53,22 +67,6 @@ public class Box : MonoBehaviour, Interactable
         if(bound)
         {
             player.transform.position = transform.position;
-            
-            //Releases player on jump or fastfall.
-            if(GameInput.Jump(playerID))
-            {
-                player.GetComponent<Movement>().grounded = true;
-                audioSource.PlayOneShot(bind, 0.5f);
-                Unbind();
-            }
-            else if(GameInput.FastFall(playerID))
-            {
-                Movement m = player.GetComponent<Movement>();
-                m.fastfallCharge = true;
-                Unbind();
-                m.FastFall();
-                audioSource.PlayOneShot(bind, 0.5f);
-            }
         }   
     }
 }

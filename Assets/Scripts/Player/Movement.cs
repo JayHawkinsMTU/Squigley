@@ -143,8 +143,11 @@ public class Movement : MonoBehaviour
     }
     void Jump()
     {
-        if(!jumpCooldown && (grounded || coyoteJump) )
+        if(!jumpCooldown && (grounded || coyoteJump || boundTo != null) )
         {
+            if(boundTo != null) {
+                boundTo.JumpOut();
+            }
             jumpCooldown = true;
             coyoteJump = false;
             grounded = false;
@@ -176,6 +179,9 @@ public class Movement : MonoBehaviour
     {
         if(!grounded && fastfallCharge && !crouching)
         {
+            if(boundTo != null) {
+                boundTo.Unbind();
+            }
             fastfallCharge = false;
             physicalMovement = false;
             playerRigidBody.velocity = new Vector3(0f, 0f);
@@ -343,6 +349,7 @@ public class Movement : MonoBehaviour
         vases = FindAllVases();
         eventSystem = GameObject.Find("EventSystem");
         ToPlayer1();
+        Cursor.visible = false;
     }
     void Move(int dir)
     {

@@ -14,28 +14,19 @@ public class Checkpoint : MonoBehaviour, IDataPersistence
     [SerializeField] bool load = true;
     public void Activate(int lives = 0)
     {
-        //UtilityText.primaryInstance.DisplayMsg("Checkpoint " + id + " Activated", Color.white);
         DeactivateAll(); //Deactivates all other checkpoints to prevent confusion.
-        //UtilityText.primaryInstance.DisplayMsg("1", Color.white);
         if(lives == 0)
         {
             lives = this.lives;
         }
-        //UtilityText.primaryInstance.DisplayMsg("2", Color.white);
         player = GameObject.Find("Player");
-        //UtilityText.primaryInstance.DisplayMsg("3", Color.white);
         Movement m = player.GetComponent<Movement>();
-        //UtilityText.primaryInstance.DisplayMsg("4", Color.white);
         m.checkPointLives = lives;
-        //UtilityText.primaryInstance.DisplayMsg("5", Color.white);
         active = true;
-        //UtilityText.primaryInstance.DisplayMsg("6", Color.white);
         spi.enabled = true;
-        //UtilityText.primaryInstance.DisplayMsg("7", Color.white);
         m.checkPointCoords = transform.position;
-        //UtilityText.primaryInstance.DisplayMsg("8", Color.white);
+        audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(activationSound, 0.5f);
-        //UtilityText.primaryInstance.DisplayMsg("9", Color.white);
         gameObject.SetActive(true);
     }
     public static void DeactivateAll()

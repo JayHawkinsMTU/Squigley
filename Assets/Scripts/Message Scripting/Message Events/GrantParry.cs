@@ -7,7 +7,8 @@ public class GrantParry : MessageEvent
     public GameObject effect;
     public override void Event(GameObject p)
     {
-        foreach(Parry parry in FindObjectsOfType<Parry>())
+        Debug.Log("Granted parry");
+        foreach(Parry parry in FindObjectsOfType<Parry>(true))
         {
             Parry.unlocked = true;
             parry.gameObject.SetActive(true);

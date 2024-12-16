@@ -12,6 +12,7 @@ public class OblivionGenerator : MonoBehaviour
     private const int MIN_MISC_OBJECTS = 5;
     private const int MAX_MISC_OBJECTS = 20;
     private const float MIN_DIST_BETWEEN_OBJ = 2.5f;
+    private const float MIN_DIST_FROM_ORIGIN = 4.5f;
     private int[,] STAGE_RANGES;
     public OblivionStage[] library; //Index 0 should be misc objects;
     public ScoreHandler scoreHandler;
@@ -46,7 +47,10 @@ public class OblivionGenerator : MonoBehaviour
             GameObject currentObj = library[objectLevel].prefabs[objectIndex];
             currentObj = Instantiate(currentObj, this.transform);
             currentObj.transform.localPosition = new Vector3(objX, objY, 1);
-
+            if(Vector2.Distance(currentObj.transform.position, Vector2.zero) < MIN_DIST_FROM_ORIGIN) {
+                Destroy(currentObj);
+                continue;
+            }
             cursorY += ZONE_SIZE / objectCount;
             prevObjX = objX;
             prevObjY = objY;
