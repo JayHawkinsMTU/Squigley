@@ -1503,7 +1503,7 @@ Canvas:
   m_GameObject: {fileID: 7143526646485449313}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2232,6 +2232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rows:
   - {fileID: 6335219943026370364}
+  backButton: {fileID: 0}
   startX: 0
   startY: 0
   audioSource: {fileID: 0}

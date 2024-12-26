@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonMatrix : MonoBehaviour
 {
     [SerializeField] Row[] rows;
+    [SerializeField] Button backButton;
     private int xIndex = 0;
     private int yIndex = 0;
     public int startX, startY;
@@ -96,41 +97,11 @@ public class ButtonMatrix : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //X axis
-        /*if((Input.GetKeyDown("left") || Input.GetKeyDown("a") || (Input.GetAxis("Horizontal1") < -deadzoneSize && dzResetX)))
-        {
-            Navigate('W');
-            dzResetX = false;
-        }
-        else if(Input.GetKeyDown("right") || Input.GetKeyDown("d") || (Input.GetAxis("Horizontal1") > deadzoneSize && dzResetX))
-        {
-            Navigate('E');
-            dzResetX = false;
-        }
-        else if(!dzResetX && Input.GetAxis("Horizontal1") < deadzoneSize && Input.GetAxis("Horizontal1") > -deadzoneSize)
-        {
-            dzResetX = true;
-        }
-
-        //Y axis
-        if((Input.GetKeyDown("down") || Input.GetKeyDown("s") || (Input.GetAxis("Vertical1") < -deadzoneSize && dzResetY)))
-        {
-            Navigate('S');
-            dzResetY = false;
-        }
-        else if(Input.GetKeyDown("up") || Input.GetKeyDown("w") || (Input.GetAxis("Vertical1") > deadzoneSize && dzResetY))
-        {
-            Navigate('N');
-            dzResetY = false;
-        }
-        else if(!dzResetY && Input.GetAxis("Vertical1") < deadzoneSize && Input.GetAxis("Vertical1") > -deadzoneSize)
-        {
-            dzResetY = true;
-        }*/
         if(GameInput.UIUp()) Navigate('N');
         if(GameInput.UILeft()) Navigate('W');
         if(GameInput.UIRight()) Navigate('E');
         if(GameInput.UIDown()) Navigate('S');
+        if(GameInput.Pause() && backButton != null) backButton.Activate();
 
         //Activation
         if(GameInput.Interact(1) || GameInput.Interact(2))

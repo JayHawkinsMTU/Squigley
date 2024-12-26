@@ -14,7 +14,6 @@ public class ScoreHandler : MonoBehaviour, IDataPersistence
     [SerializeField] GameObject corruption;
     [SerializeField] GameObject initZone;
     private Vector2 pStartPos;
-    private Vector2 cStartPos;
     
     private int maxY = 0;
     private int coinCount = 0;
@@ -71,7 +70,6 @@ public class ScoreHandler : MonoBehaviour, IDataPersistence
         coinCount = 0;
         highScoreText.color = Color.white;
         UpdateScore();
-        corruption.transform.position = cStartPos;
         corruption.GetComponent<Corruption>().Reset();
         player.transform.position = pStartPos;
         DestroyZones();
@@ -86,7 +84,6 @@ public class ScoreHandler : MonoBehaviour, IDataPersistence
     void Start()
     {
         pStartPos = player.transform.position;
-        cStartPos = corruption.transform.position;
         Reset();
     }
 

@@ -6131,7 +6131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  player: {fileID: 887490771}
+  player: {fileID: 949510162}
 --- !u!82 &696804790
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7162,7 +7162,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7483,7 +7483,8 @@ PrefabInstance:
       value: 2533354610
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8948729902954937203, guid: 6a43f2951ada0da408a551d212789c1d, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1209983756114507880, guid: 6a43f2951ada0da408a551d212789c1d, type: 3}
       insertIndex: 2
@@ -7725,7 +7726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2022894665729997113, guid: 453d78d1b220ca0479b6978ec21b8b0a, type: 3}
       propertyPath: m_Depth
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2022894665729997113, guid: 453d78d1b220ca0479b6978ec21b8b0a, type: 3}
       propertyPath: orthographic size

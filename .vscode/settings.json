@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Squigly (Git).sln"
+    "dotnet.defaultSolution": "Squigley (Git).sln"
 }

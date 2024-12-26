@@ -84,10 +84,10 @@ public class Movement : MonoBehaviour
             }
             gameObject.SetActive(true);
             audioSource.PlayOneShot(death, volume);
+            dead = true;
             if(!oblivion)
             {
                 transform.position = new Vector3(checkPointCoords.x, checkPointCoords.y, 0);
-                dead = true;
                 if(checkPointLives > 0)
                 {
                     checkPointLives--;
