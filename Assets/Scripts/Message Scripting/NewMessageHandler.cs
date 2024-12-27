@@ -97,6 +97,12 @@ public class NewMessageHandler : MonoBehaviour, Interactable
         {
             music.StartMusic();
         }
+        // Check for skin if bouncer logic attached
+        BouncerLogic b = GetComponent<BouncerLogic>();
+        if(b != null)
+        {
+            b.Check();
+        }
     }
     public void Close()
     {

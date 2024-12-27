@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b98a671db6c46d40a94a7cc3634d69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  pCamera: {fileID: 0}
   eventSystem: {fileID: 0}
   uncrouchCheck: {fileID: 8721724081831348040}
   leftColliderCheck: {fileID: 171654733629173681}
@@ -388,12 +388,10 @@ MonoBehaviour:
   death: {fileID: 8300000, guid: 71ecc6745ca6e5849a2ef0ea7b6f011f, type: 3}
   land: {fileID: 8300000, guid: d6c2d51ed38c4404fb131b2cfe60f278, type: 3}
   volume: 0.5
-  deadzoneSize: 0.1
   playerID: 2
   oblivion: 0
   physicalMovement: 1
   outerVelX: 0
-  fastfallVelocity: 13.25
   fancyDeaths: []
   reloadOnDeath: 0
   boundTo: {fileID: 0}
@@ -567,7 +565,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1536
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1031,7 +1029,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1536
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

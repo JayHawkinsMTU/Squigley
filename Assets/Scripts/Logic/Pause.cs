@@ -13,6 +13,7 @@ public class Pause : MonoBehaviour
     [SerializeField] UtilityText text3; //"Saving..."
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip audioClip;
+    [SerializeField] bool wipeStaticMsg = false; // For tutorial msg
     public bool paused  = false;
     private bool utilityPaused = false;
     private bool deadzoneReset;
@@ -78,18 +79,7 @@ public class Pause : MonoBehaviour
         {
             if(!utilityPaused && GameInput.Interact(1))
             {
-                text3.DisplayMsg("saving...", new Color(90,90,90));
-                Time.timeScale = 1;
-                if(DataPersistenceManager.instance != null)
-                    DataPersistenceManager.instance.SaveGame();
-                if(!quitToDesktop)
-                {
-                    SceneManager.LoadSceneAsync(menuName, LoadSceneMode.Single);
-                }
-                else
-                {
-                    Application.Quit();
-                }
+                Quit();
             }
             else if(!utilityPaused && GameInput.UIDown())
             {
@@ -124,6 +114,26 @@ public class Pause : MonoBehaviour
                     downArrow.anchoredPosition = downArrowStart;
                 }
             }
+        }
+    }
+
+    private void Quit()
+    {
+        text3.DisplayMsg("saving...", new Color(90,90,90));
+        Time.timeScale = 1;
+        if(wipeStaticMsg)
+        {
+            Message.globalMessage = new string[1] { "Welcome, Squigley" };
+        }
+        if(DataPersistenceManager.instance != null)
+            DataPersistenceManager.instance.SaveGame();
+        if(!quitToDesktop)
+        {
+            SceneManager.LoadSceneAsync(menuName, LoadSceneMode.Single);
+        }
+        else
+        {
+            Application.Quit();
         }
     }
 }

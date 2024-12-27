@@ -25006,6 +25006,10 @@ PrefabInstance:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 82164242}
+    - target: {fileID: 1286047504244268483, guid: 62aa1c880182083478dbe1b5766cc82f, type: 3}
+      propertyPath: wipeStaticMsg
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1898920524465024623, guid: 62aa1c880182083478dbe1b5766cc82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

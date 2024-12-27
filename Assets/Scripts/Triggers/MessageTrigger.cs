@@ -8,15 +8,19 @@ public class MessageTrigger : MonoBehaviour, IDataPersistence
     bool found = false;
     string[] spawnMessage;
     [SerializeField] string[] triggeredMessage;
-    [SerializeField] int id = 0; //0 Should correspond to unassigned ID's, there should be none at the end of development.
+    // negative if you don't want to load or save data
+    [SerializeField] int id = 0; 
     public bool oneTimeOnly = true;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if((collision.gameObject.tag == "Player") && (!oneTimeOnly || !found))
         {
             eventSystem.GetComponent<UICoinHandler>().messagesTriggered++;
-            UtilityText.primaryInstance.DisplayMsg("New Message!", Color.green);
-            Message.newMessage = true;
+            if(id >= 0)
+            {
+                UtilityText.primaryInstance.DisplayMsg("New Message!", Color.green);
+                Message.newMessage = true;
+            }
             Message.globalMessage = triggeredMessage;
             found = true;
         }
@@ -29,7 +33,7 @@ public class MessageTrigger : MonoBehaviour, IDataPersistence
 
     public void LoadData(SaveData data)
     {
-        if(data.unlockedMessages[id])
+        if(id >= 0 && data.unlockedMessages[id])
         {
             found = true;
             if(oneTimeOnly) {
@@ -39,6 +43,7 @@ public class MessageTrigger : MonoBehaviour, IDataPersistence
     }
     public void SaveData(ref SaveData data)
     {
+        if(id < 0) return;
         data.unlockedMessages[id] = this.found;
     }
 }
