@@ -2040,29 +2040,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7859159018847532003, guid: 8535c008ef0aa6e48b4c0b27c2473fc3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 423677349}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8535c008ef0aa6e48b4c0b27c2473fc3, type: 3}
---- !u!1 &423677348 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7859159018847532003, guid: 8535c008ef0aa6e48b4c0b27c2473fc3, type: 3}
-  m_PrefabInstance: {fileID: 423677347}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &423677349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423677348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03b017b36ab1b624a991f386adc759da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievementName: OG
 --- !u!1 &450150041
 GameObject:
   m_ObjectHideFlags: 0
@@ -7096,7 +7075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Release v1.2
+  m_text: Release v1.3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c814bf59fbb09a64cab824908c5610b9, type: 2}
   m_sharedMaterial: {fileID: 7743664375750879217, guid: c814bf59fbb09a64cab824908c5610b9, type: 2}
